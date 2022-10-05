@@ -1,3 +1,75 @@
 body {
     font-family: 'Poppins', sans-serif;
+    background: radial-gradient(#283d5f, #111b2a);
+    height: 100vh;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+.pocket {
+    font-size: 60px;
+}
+
+.caixas{
+    width: 600px;
+    padding-bottom: 100px;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 10px 0;
+}
+
+.input{
+    background: #111b2a;
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    height: 140px;
+    flex-wrap: wrap;
+}
+
+#critica{
+    background: #111b2a;
+    border-radius: 8px;
+    border: none;
+}
+
+#dataDeLancamento, #dataAssistido {
+    color: rgb(105, 105, 105);
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.botao{
+    text-align: center;
+    width: 150px;
+    border-radius: 8px;
+    border: #111b2a;
+    background-color: #283d5f;
+    color: whitesmoke;
+    padding: 8px;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.botao:hover{
+    transform: scale(1.1);
+}
+
+.botao-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
 }
