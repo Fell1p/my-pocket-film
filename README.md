@@ -2,8 +2,9 @@
 
 ## Objetivo
 
-Desenvolver um formulario que adicionará um card com as respectivas informações onde o usuário poderá visualizar de forma resumida os dados e poderá adicionar novos cardas e através do ícone da lixeira excluir um card.
-Os dados fornecidos via formulário alimentará um objeto que será usado para a construção do Card onde será exibido as informações fornecidas.
+Site de filmes que possibilita inserir e guardar informações de seus filmes preferidos.
+Desenvolver um formulário que adicionará um card com as respectivas informações onde o usuário poderá visualizar de forma resumida os dados e poderá adicionar novos cards e reovê-los através do ícone de lixeira.
+Os dados fornecidos via formulário alimentará um objeto que será usado para a construção do Card onde serão exibidas as informações fornecidas.
 
 ## Tecnologias
 
