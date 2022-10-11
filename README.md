@@ -17,6 +17,10 @@ Foi utilizado o HTML5 para a estruturação do web site, CSS3 para a estilizaç�
 
 ![Cards](https://user-images.githubusercontent.com/99513670/194970250-e5e02c43-5829-467b-b058-473a38c3c0d7.PNG)
 
+## Web Site
+
+https://fell1p.github.io/my-pocket-film/
+
 ## Linkedin: 
 
 https://www.linkedin.com/in/felipe-rez-almeida/
