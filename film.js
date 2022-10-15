@@ -1,3 +1,4 @@
+//Integração do HTML com JS
 let titulo = document.getElementById("titulo");
 let diretor = document.getElementById("diretor");
 let dataAssistido = document.getElementById("dataAssistido");
@@ -12,7 +13,13 @@ let filme = {}
 let listaGenero = ["Terror", "Ficção", "Drama", "Romance", "Comédia", "Ação", "Comédia Romantica", "Suspense", "Animação", "Documentário"]
 let contador = 0
 
+if(localStorage.length > 0) {
+    listaFilmes = JSON.parse(localStorage.getItem('filmesArray'));
 
+    adicionarFilme() 
+}
+
+//Desenvolvimento dos eventos de criação do objeto e exclusão do mesmo
 form.addEventListener("submit", function (evento) {
     evento.preventDefault() //cancela o comportamento padrão de um formulario que seria o recarregamento da página 
     evento.stopPropagation() //evita que a emissão do evento se propague para outros elementos
@@ -38,11 +45,14 @@ form.addEventListener("submit", function (evento) {
 
     listaFilmes.push(filme)
 
+    localStorage.setItem('filmesArray', JSON.stringify(listaFilmes))
+
     adicionarFilme()
 
 
 })
 
+//Construção de elementos no HTML
 function adicionarFilme() {
 
     cardsFilmes.innerHTML = ''
@@ -97,6 +107,9 @@ function adicionarFilme() {
         lixeira.addEventListener("click", () => {
             indice = listaFilmes[contador]
             listaFilmes.splice(indice, 1)
+
+            localStorage.setItem('filmesArray', JSON.stringify(listaFilmes))
+
             adicionarFilme()
         })
 
@@ -105,6 +118,8 @@ function adicionarFilme() {
         let btnVerMais = `<img src="./img/aberto.png" width="13px">`
         botaoVerMais.innerHTML = btnVerMais
 
+
+        //Append
         botoesCard.append(lixeira, botaoVerMais)
         containerBotoes.appendChild(botoesCard)
 
