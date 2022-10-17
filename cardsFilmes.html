@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>My Pocket Film</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>My Pocket Film</title>
 </head>
+
 <body>
-    <header>
-            <div class="navbar">
-                <ul>
-                    <li><a href="./index.html">Cadastrar Filme</a></li>
-                    <li><a href="./cardsFilmes.html">Lista de Filmes</a></li>
-                </ul>
+  <header>
+    <div class="navbar">
+      <div class="icone-logo">
+        <a href="./index.html"><img src="./img/logo.png" alt="home" width="50px"></a>
+      </div>
+      <ul class="itens-navbar">
+        <li><a class="item-navbar" href="./cadastro.html">Cadastrar Filme</a></li>
+        <li><a class="item-navbar" href="./cardsFilmes.html">Lista de Filmes</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section>
+      <section class="container-pesquisa">
+        <input type="search" name="" id="pesquisaFilmes" placeholder="Pesquisar filmes salvos">
+        <button type="submit" class="botao-pesquisar"><img src="./img/lupa.png" width="15px"></button>
+      </section>
+
+      <section class="cards">
+
+
+      </section>
+
+    </section>
+
+    <!-- Vertically centered scrollable modal -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal fade" id="modal-filme" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+          <div class="modal-container">
+            <div class="modal-header">
+
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-    </header>
-    <main>
-        <section class="container">
-            <section>
-                <input type="search" name="" id="pesquisaFilmes" placeholder="Pesquisar filmes salvos">
-                <button type="submit" class="botao-pesquisar"><img src="./img/lupa.png" width="15px"></button>
-            </section>
-            
-            <section class="cards">
-            
-              <!--
-                <div class="card">
-                    <div class="poster">
-                        <img src="https://a-static.mlcdn.com.br/800x560/poster-cartaz-stranger-things-4-c-pop-arte-skins/poparteskins2/15876108331/00722a718c28e34cbeecc4df93731d21.jpeg" class="img-poster">
-                    </div>
-                    <div class="conteudo">
-                        <h5 class="titulo">Stranger Things</h5>
-                        <div class="classificacao">
-                            <img src="./img/estrela.png" class="icone-estrela" >
-                            <p class="nota">5.0</p>
-                        </div>
-                        <p class="dataAssistido">Assistido em: 05/10/22</p>
-                        <p class="genero">Gênero: Ficção</p>
-                    </div>
-                    <div class="container-botoes">
-                        <div class="botoes-card">
-                            <img src="./img/lixeira.png" class="lixeira" width="15px">
-                            <button class="botao-verMais"><img src="./img/aberto.png" width="13px"></button>
-                        </div>   
-                    </div>
-                </div>
-                -->
-            </section>
-            
-        </section>
-        <div class="modal" tabindex="-1" id="modal">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>Filme adicionado em sua lista de filmes!</p>
-                </div>
-              </div>
-            </div>
+            <div class="modal-corpo-filme"></div>
+
           </div>
-     
-    </main>
-    <script src="./film.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="./films.js"></script>
+  
 </body>
+
 </html>

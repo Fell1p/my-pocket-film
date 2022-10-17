@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>My Pocket Film</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="icone-logo">
+                <a href="./index.html"><img src="./img/logo.png" alt="home" width="50px"></a>
+            </div>
+            <ul class="itens-navbar">
+                <li><a class="item-navbar" href="./cadastro.html">Cadastrar Filme</a></li>
+                <li><a class="item-navbar" href="./cardsFilmes.html">Lista de Filmes</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="container">
+        <h1 class="titulo-cadastro">Cadastrar novo filme</h1>
+        <form class="caixas">
+            <div class="caixa">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" class="input">
+            </div>
+
+            <p class="genero-titulo">Gênero:</p>
+            <div class="checkbox-container">
+                <div>
+                    <input type="checkbox" value="1" class="genero" name="genero">Terror
+                </div>
+                <div>
+                    <input type="checkbox" value="2" class="genero" name="genero">Ficção Científica
+
+                </div>
+                <div>
+                    <input type="checkbox" value="3" class="genero" name="genero">Drama
+                </div>
+                <div>
+                    <input type="checkbox" value="4" class="genero" name="genero">Romance
+                </div>
+                <div>
+                    <input type="checkbox" value="5" class="genero" name="genero">Comédia
+                </div>
+                <div>
+                    <input type="checkbox" value="6" class="genero" name="genero">Ação
+                </div>
+                <div>
+                    <input type="checkbox" value="7" class="genero" name="genero">Comédia Romântica
+                </div>
+                <div>
+                    <input type="checkbox" value="8" class="genero" name="genero">Suspense
+                </div>
+                <div>
+                    <input type="checkbox" value="9" class="genero" name="genero">Animação
+                </div>
+                <div>
+                    <input type="checkbox" value="10" class="genero" name="genero">Documentário
+                </div>
+            </div>
+
+            <div class="caixa">
+                <label for="diretor">Diretor</label>
+                <input type="text" id="diretor" class="input">
+            </div>
+
+            <div class="caixa">
+                <label for="dataAssistido">Assistido em</label>
+                <input type="date" id="dataAssistido" class="input">
+            </div>
+
+            <div class="caixa">
+                <label for="poster">URL Poster</label>
+                <input type="text" id="poster"
+                    placeholder="https://img.elo7.com.br/product/original/3041524/big-poster-serie-stranger-things-netflix-lo003-90x60-cm-stranger-things-netflix.jpg"
+                    class="input">
+            </div>
+
+            <div class="caixa">
+                <label for="nota">Nota</label>
+                <input type="text" id="nota" placeholder="ex: 3.5, 4" class="input">
+            </div>
+
+            <div class="caixa">
+                <label for="critica">Crítica</label>
+                <textarea cols="40" rows="8" id="critica"></textarea>
+            </div>
+
+            <div class="botao-container">
+                <button type="submit" class="botao-adicionar">Adicionar</button>
+            </div>
+        </form>
+    </section>
+    <div class="modal fade" id="alerta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog mt-5">
+            <div class="modal-container">
+                <div class="modal-header">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-corpo">Filme adicionado com sucesso!</div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    
+
+
+</body>
+
+</html>
