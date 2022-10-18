@@ -1,9 +1,10 @@
+
 let botaoPesquisar = document.querySelector('.botao-pesquisar')
 let inputPesquisa = document.querySelector('#pesquisaFilmes')
 const modalFilme = new bootstrap.Modal("#modal-filme")
-const conteudoModal = document.querySelector('.modal-corpo-filme')
-
-
+const conteudoModal = document.querySelector('.conteudo-modal')
+const posterModal = document.querySelector('.poster-modal')
+const tituloModal = document.querySelector('.modal-title')
 let cardsFilmes = document.querySelector('.cards')
 let contador = 0
 
@@ -18,14 +19,13 @@ botaoPesquisar.addEventListener('click', () => {
 
     for (const film of listaFilmes) {
         if (film.titulo == inputPesquisa.value.toUpperCase()) {
-            console.log(inputPesquisa)
-            console.log("filme encontrado")
             const divCard = document.createElement("div")
             divCard.classList.add("card")
 
             const divCardPoster = document.createElement("div")
             divCardPoster.classList.add("poster")
             let posterFilme = `<img src="${film.poster}" class="img-poster">`
+            let posterFilme2 = `<img src="${film.poster}" class="img-poster2">`
             divCardPoster.innerHTML = posterFilme
 
             const divCardConteudo = document.createElement("div")
@@ -66,6 +66,14 @@ botaoPesquisar.addEventListener('click', () => {
             botaoVerMais.classList.add("botao-verMais")
             let btnVerMais = `<img src="./img/aberto.png" width="13px">`
             botaoVerMais.innerHTML = btnVerMais
+            botaoVerMais.addEventListener('click', () => {
+                modalFilme.show()
+    
+                tituloModal.innerHTML = `${film.titulo.toUpperCase()}`
+                conteudoModal.innerHTML = `<strong>Gênero :</strong> ${film.genero}<br><br> <strong>Diretor :</strong> ${film.diretor}<br><br><strong>Data Assistido :</strong> ${film.dataAssistido}<br><br>  ${estrela}  <strong>${film.nota}</strong><br><br><strong>Crítica :</strong> ${film.critica}`
+                posterModal.innerHTML = `${posterFilme2}`
+            
+            })
 
 
             //Append
@@ -105,6 +113,7 @@ function adicionarFilme() {
         const divCardPoster = document.createElement("div")
         divCardPoster.classList.add("poster")
         let posterFilme = `<img src="${filme.poster}" class="img-poster">`
+        let posterFilme2 = `<img src="${filme.poster}" class="img-poster2">`
         divCardPoster.innerHTML = posterFilme
 
         const divCardConteudo = document.createElement("div")
@@ -160,7 +169,10 @@ function adicionarFilme() {
 
         botaoVerMais.addEventListener('click', () => {
             modalFilme.show()
-            conteudoModal.innerHTML = `${filme.titulo.toUpperCase()}<br>${filme.dataAssistido}`
+
+            tituloModal.innerHTML = `${filme.titulo.toUpperCase()}`
+            conteudoModal.innerHTML = `<strong>Gênero :</strong> ${filme.genero}<br><br> <strong>Diretor :</strong> ${filme.diretor}<br><br><strong>Data Assistido :</strong> ${filme.dataAssistido}<br><br>  ${estrela}  <strong>${filme.nota}</strong><br><br><strong>Crítica :</strong> ${filme.critica}`
+            posterModal.innerHTML = `${posterFilme2}`
         
         })
 

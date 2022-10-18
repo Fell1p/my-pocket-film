@@ -45,7 +45,5 @@ form.addEventListener("submit", function (evento) {
    document.querySelector(".caixas").reset()
 
    alertaFilmeCadastrado.show()
-
-
 })
 
